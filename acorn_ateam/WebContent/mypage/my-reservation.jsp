@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<!-- 손도 못대겠어요 -->
+	
 </body>
 </html>
