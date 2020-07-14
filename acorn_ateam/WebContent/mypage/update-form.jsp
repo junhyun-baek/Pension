@@ -20,6 +20,10 @@
 			<input type="text" id="id" value="<%=dto.getUsers_id() %>" disabled />
 		</div>
 		<div class="form-group">
+			<label for="pwd">비밀번호</label>
+			<input type="text" id="pwd" name="pwd" />
+		</div>
+		<div class="form-group">
 			<label for="phone">전화번호</label>
 			<input type="text" id="phone" name="phone" />
 		</div>
@@ -43,7 +47,7 @@
 		}else{
 			location.href="${pageContext.request.contextPath }/mypage.jsp";
 		}
-	}
+	});
 
 </script>
 
