@@ -10,5 +10,6 @@
 	<a href="signup/signup_form.jsp">회원가입</a>
 	<a href="log/login_form.jsp">로그인</a>
 	<a href="log/logout.jsp">로그아웃</a>
+	<a href="mypage/mypage.jsp">마이페이지</a>
 </body>
 </html>

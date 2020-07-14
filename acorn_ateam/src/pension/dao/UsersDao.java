@@ -28,7 +28,7 @@ public class UsersDao {
 		try {
 			conn = new DbcpBean().getConn();
 
-			String sql = "insert into users (users_id,users_pwd,users_email,users_phone) values(?,?,?,?)";
+			String sql = "insert into tb_users (users_id,users_pwd,users_email,users_phone) values(?,?,?,?)";
 			pstmt = conn.prepareStatement(sql);
 
 			pstmt.setString(1, dto.getUsers_id());
@@ -69,7 +69,7 @@ public class UsersDao {
 			conn = new DbcpBean().getConn();
 			//실행할 sql 문 준비하기
 			String sql = "select users_id"
-					+" from users"
+					+" from tb_users"
 					+" where users_id=? and users_pwd=?";
 			pstmt = conn.prepareStatement(sql);
 			//sql 문에 ? 에 바인딩할 값이 있으면 바인딩하고 
@@ -96,5 +96,36 @@ public class UsersDao {
 			}
 		}
 		return isValid;
+	}
+	
+	// 회원 탈퇴
+	public boolean delete(String id) {
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int flag=0;
+		
+		try {
+			conn = new DbcpBean().getConn();
+
+			String sql = "delete from tb_users where users_id=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+			flag=pstmt.executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (conn != null)
+					conn.close();
+			} catch (Exception e) {}
+		}if(flag>0) {
+			return true;
+		}else {
+			return false;
+		}
 	}
 }
