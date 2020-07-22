@@ -22,12 +22,14 @@
 <body>
 <%
 	if(isValid){%>
+	<script>
 		location.href="${pageContext.request.contextPath }/index.jsp";
+	</script>
 		<%session.setAttribute("id", id);%>
 <%}else{%>
 	<script>
 		alert("아이디 혹은 비밀번호가 틀립니다.");
-		location.href="${pageContext.request.contextPath }/log.login_form.jsp";
+		location.href="${pageContext.request.contextPath }/log/login_form.jsp";
 	</script>
 <% }%>
 </body>

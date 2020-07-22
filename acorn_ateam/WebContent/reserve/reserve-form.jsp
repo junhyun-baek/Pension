@@ -27,8 +27,8 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td>1 강의실</td>
-					<td><%=date %></td>
+					<td><input type="text" name="room_name" value="1 강의실"  /></td>
+					<td><input type="text" value=<%=date %> disabled /><input type="text" value=<%=date %> name="date" hidden /></td>
 					<td>
 						<select name="1days" class="days">
 							<option value="1">1박 2일</option>
@@ -43,8 +43,8 @@
 					<td><input type="checkbox" name="check" value="1" /></td>
 				</tr>
 				<tr>
-					<td>2 강의실</td>
-					<td><%=date %></td>
+					<td><input type="text" name="room_name" value="2 강의실"  /></td>
+					<td><input type="text" value=<%=date %> disabled /></td>
 					<td>
 						<select name="2days" class="days">
 							<option value="1">1박 2일</option>
@@ -59,8 +59,8 @@
 					<td><input type="checkbox" name="check" value="2" /></td>
 				</tr>
 				<tr>
-					<td>3 강의실</td>
-					<td><%=date %></td>
+					<td><input type="text" name="room_name" value="3 강의실"  /></td>
+					<td><input type="text" value=<%=date %> disabled /></td>
 					<td>
 						<select name="3days" class="days">
 							<option value="1">1박 2일</option>
@@ -75,8 +75,8 @@
 					<td><input type="checkbox" name="check" value="3"  /></td>
 				</tr>
 				<tr>
-					<td><p class="room">4 강의실</p></td>
-					<td><%=date %></td>
+					<td><input type="text" name="room_name" value="4 강의실"  /></td>
+					<td><input type="text" value=<%=date %> disabled /></td>
 					<td>
 						<select name="4days" class="days">
 							<option value="1">1박 2일</option>
